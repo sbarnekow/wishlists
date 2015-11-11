@@ -1,0 +1,41 @@
+@import "normalize";
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+.container {
+  @include outer-container
+}
+.table-set {
+  @include fill-parent();
+  @include row(table);
+}
+button.sign-up{
+  color: black;
+  border: none;
+  appearance: none;
+  box-shadow: none;
+  border-radius: 0;
+  background: #FFFFFF;
+  border-radius: 11px;
+}
+.heart {
+  height: 15px;
+}
+nav {
+  @include span-columns(5);
+  @include pad();
+  background-color: #D94272;
+  color: white;
+}
+section {
+  @include span-columns(8);
+  @include reset-display;
+  @include pad();
+  background-color: #ECECEC;
+}
+.wishlist-item{
+  width: 100%;
+  padding: 10%;
+  background-color: white;
+  border: 1px solid #ececec;
+}

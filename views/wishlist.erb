@@ -1,0 +1,38 @@
+<head>
+  <title>amazon wishlists</title>
+  <link rel="stylesheet" href="/sass/style.css" type="text/css"/>
+</head>
+
+<body>
+  <div class="container">
+    <div class="table-set">
+      <nav>
+          <h1>Bliss</h1>
+          <br/>
+          Lists
+          <br/>
+          Wish No More
+          <br/>
+          <button class="sign-up">Sign Up to See Your Wishlists</button>
+      </nav>
+      <section>
+        <div class="price-scale">
+        </div>
+        <div class="wishlist-title"><img src="images/heart.png" class="heart"/>Baby Rex's Wishlist</div>
+        <div class="wishlist-details">
+          <div class="countdown">Arrives in 45 Days</div>
+          <div class="location">Location: Pasadena, California</div>
+        </div>
+        <% wishlist_data.each do |item| %>
+          <div class="wishlist-item">
+              <%= item[:name] %>
+              <br/>
+              <%= item[:price] %>
+              <br/>
+              <%= item[:rating] %>
+          </div>
+        <% end %>
+    </section>
+    </div>
+  </div>
+</body>

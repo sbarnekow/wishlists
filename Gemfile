@@ -1,0 +1,8 @@
+source 'https://rubygems.org'
+gem 'nokogiri'
+gem 'sinatra'
+gem 'thin'
+gem 'bourbon'
+gem 'neat'
+gem 'sass'
+gem 'shotgun'
