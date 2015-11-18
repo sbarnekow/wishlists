@@ -7,13 +7,20 @@
   <div class="container">
     <div class="table-set">
       <nav>
-          <h1>Bliss</h1>
-          <br/>
-          Lists
-          <br/>
-          Wish No More
-          <br/>
+          <div class="bliss">
+            <h1>Bliss</h1>
+          </div>
+          <div class="bliss-details">
+            <span class="lists">Lists</span>
+            <span>Wish No More</span>
+          </div>
           <button class="sign-up">Sign Up to See Your Wishlists</button>
+          <form class="wishlist-data">
+              <input type="date" name="baby-due-date" placeholder="Baby's Due Date"></input>
+              <input type="location" name="location" placeholder="Your Location"></input>
+              <input type="text" name="wishlist-url" placeholder="Amazon Wishlist URL"></input>
+            <button>Share!</button>
+          </form>
       </nav>
       <section>
         <div class="price-scale">
@@ -25,11 +32,14 @@
         </div>
         <% wishlist_data.each do |item| %>
           <div class="wishlist-item">
-              <%= item[:name] %>
-              <br/>
-              <%= item[:price] %>
-              <br/>
-              <%= item[:rating] %>
+              <div class="product-image"><a href="<%= item[:link] %>"><%= item[:image] %></a></div>
+              <div class="product-data">
+                <a href="<%= item[:link] %>"><%= item[:name] %></a>
+                <br/>
+                <%= item[:price] %>
+                <br/>
+                <%= item[:rating] %>
+              </div>
           </div>
         <% end %>
     </section>

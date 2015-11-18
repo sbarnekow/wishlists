@@ -4,12 +4,23 @@ require 'sinatra'
 require 'sass'
 
 
-get '/hello' do
-  erb :wishlist, locals: {wishlist_data: parse_wishlist}
+get '/' do
+  erb :welcome_page
 end
 
-def parse_wishlist
-  doc = Nokogiri::HTML(open('https://www.amazon.com/gp/registry/ref=cm_wl_edit_bck?ie=UTF8&id=3E7U1ZB9G2JA6&type=giftlist'))
+post '/wishlist/' do
+  @wishlist_url = params[:wishlist][:url]
+  @wishlist_detail = parse_wishlist(@wishlist_url)
+  puts @wishlist_url
+  puts @wishlist_detail
+  erb :wishlist, locals: {wishlist_data: @wishlist_detail}
+end
+
+
+
+
+def parse_wishlist(wishlist_url)
+  doc = Nokogiri::HTML(open(wishlist_url))
   wishlist_item_data = []
   # doc.css('[id^=itemName]').each do |link|
   #   puts link.content
@@ -17,12 +28,18 @@ def parse_wishlist
   doc.css('[id^=item_]').each do |info|
     name = info.css('[id^=itemName]').text.strip
     price = info.css('[id^=itemPrice]').text.strip
-    image = info.css('[id^=itemImage]')
-    # puts image
-    ratings = []
-    rating = info.css('div > div.a-column.a-span12.g-span12when-narrow.g-span7when-wide > div:nth-child(2) > a.a-link-normal.a-declarative.g-visible-js.reviewStarsPopoverLink > i.a-icon.a-icon-star.a-star-5 > span').text
+    image = info.css('[id^=itemImage] img')
+    a_tag = info.css('[id^=itemImage] a')
+    link_val = a_tag.xpath('@href').first
+    link = "https://amzn.com#{link_val}/?tag=blilis-20"
+    fourhalf_rating = info.css('.a-star-4-5').text
+    four_rating = info.css('.a-star-4').text
+    five_rating = info.css('.a-star-4').text
+    # puts fourhalf_rating
+    # puts four_rating
+    # puts five_rating
 
-    wishlist_item_data.push({name: name, price: price, rating: rating})
+    wishlist_item_data.push({name: name, price: price, image: image, link: link})
   end
 
   return wishlist_item_data

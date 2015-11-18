@@ -1,0 +1,25 @@
+<head>
+  <title>amazon wishlists</title>
+  <link rel="stylesheet" href="/sass/style.css" type="text/css"/>
+</head>
+
+<body>
+  <div class="container">
+    <div class="table-set">
+      <nav>
+          <div class="bliss">
+            <h1>Bliss Lists</h1>
+            <h3>Wish No More</h3>
+          </div>
+      </nav>
+    </div>
+    <section class="generate-wishlist">
+      <div class="wishlist-form table-set">
+        <form class="wishlist-data" action="/wishlist/" method="POST">
+          <input type="text" name="wishlist[url]" id="wishlist-url" placeholder="Amazon Wishlist URL" ></input>
+          <input type="submit"></input>
+        </form>
+      </div>
+    </section>
+  </div>
+</body>

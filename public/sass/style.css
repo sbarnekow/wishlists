@@ -377,14 +377,20 @@ html {
   width: 100%;
   table-layout: fixed; }
 
-button.sign-up {
-  color: black;
+button {
   border: none;
   appearance: none;
   box-shadow: none;
-  border-radius: 0;
   background: #FFFFFF;
-  border-radius: 11px; }
+  padding: 18px 69px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  font-size: 16px;
+  color: #484848;
+  letter-spacing: 0.19px;
+  line-height: 18px;
+  cursor: pointer; }
 
 .heart {
   height: 15px; }
@@ -401,6 +407,13 @@ section {
   width: 66.66667%;
   padding: 2.35765%;
   background-color: #ECECEC; }
+
+span.lists {
+  background-color: white;
+  color: #D94272; }
+
+.bliss {
+  text-align: center; }
 
 .wishlist-item {
   width: 100%;
