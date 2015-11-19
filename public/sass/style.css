@@ -449,10 +449,19 @@ span.lists {
   flex-wrap: wrap;
   align-items: center; }
 
-.buy-on-amazon {
-  /* Rectangle 4: */
-  background: #FF88A1;
-  border-radius: 11px;
-  color: white; }
+.buy-product {
+  font-size: 16px;
+  color: #000000;
+  letter-spacing: 0.19px;
+  line-height: 18px; }
+  .buy-product .buy-on-amazon {
+    background: #FF88A1;
+    border-radius: 11px;
+    color: white; }
+  .buy-product #price {
+    font-size: 20px;
+    color: #9B9B9B;
+    letter-spacing: 0.24px;
+    line-height: 23px; }
 
 /*# sourceMappingURL=style.css.map */

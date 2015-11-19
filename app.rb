@@ -32,12 +32,20 @@ def parse_wishlist(wishlist_url)
     a_tag = info.css('[id^=itemImage] a')
     link_val = a_tag.xpath('@href').first
     link = "https://amzn.com#{link_val}/?tag=blilis-20"
-    fourhalf_rating = info.css('.a-star-4-5').text
+
+    one_rating = info.css('.a-star-1').text
+    onehalf_rating = info.css('.a-star-1-5').text
+    two_rating = info.css('.a-star-2').text
+    twohalf_rating = info.css('.a-star-2-5').text
+    three_rating = info.css('.a-star-3').text
+    threehalf_rating = info.css('.a-star-3-5').text
     four_rating = info.css('.a-star-4').text
-    five_rating = info.css('.a-star-4').text
-    # puts fourhalf_rating
-    # puts four_rating
-    # puts five_rating
+    fourhalf_rating = info.css('.a-star-4-5').text
+    five_rating = info.css('.a-star-5').text
+
+    puts "&&&&&&&&&&&&&&&&&&&&&&&&&&&&  rating #{fourhalf_rating}"
+    puts "&&&&&&&&&&&&&&&&&&&&&&&&&&&&  rating #{four_rating}"
+    puts "&&&&&&&&&&&&&&&&&&&&&&&&&&&&  rating #{five_rating}" 
 
     wishlist_item_data.push({name: name, price: price, image: image, link: link})
   end

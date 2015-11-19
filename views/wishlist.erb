@@ -39,12 +39,11 @@
               <span class="product-data">
                 <%= item[:name] %>
                 <br/>
-                <%= item[:price] %>
-                <br/>
                 <%= item[:rating] %>
               </span>
               <span class="buy-product">
                 <a href="<%= item[:link] %>"><button class="buy-on-amazon">Buy on Amazon</button></a>
+                <p><span>Only  </span><span id="price"><%= item[:price] %></span></p>
               </span>
             </div>
           </div>
