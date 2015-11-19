@@ -410,15 +410,49 @@ section {
 
 span.lists {
   background-color: white;
-  color: #D94272; }
+  padding: 5px;
+  color: #D94272;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px; }
 
-.bliss {
-  text-align: center; }
+#bliss {
+  font-size: 400%; }
 
-.wishlist-item {
-  width: 100%;
-  padding: 10%;
+.buttons {
+  margin-top: 50%; }
+
+.wishlist-title {
+  width: 50%;
+  margin-bottom: 2%; }
+
+#title-text {
+  font-size: 24px;
+  color: #484848;
+  letter-spacing: 0.29px;
+  line-height: 28px; }
+
+.wishlist-details {
+  width: 50%;
+  font-size: 16px;
+  color: #484848;
+  letter-spacing: 0.19px;
+  line-height: 18px;
+  margin-bottom: 5%; }
+
+.wishlist-item-container {
   background-color: white;
-  border: 1px solid #ececec; }
+  border: 1px solid #ececec;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center; }
+
+.buy-on-amazon {
+  /* Rectangle 4: */
+  background: #FF88A1;
+  border-radius: 11px;
+  color: white; }
 
 /*# sourceMappingURL=style.css.map */

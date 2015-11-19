@@ -1,45 +1,52 @@
 <head>
   <title>amazon wishlists</title>
   <link rel="stylesheet" href="/sass/style.css" type="text/css"/>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script src="/js/jquery.fittext.js"></script>
+  <script>
+    jQuery("#bliss").fitText(1.2, { minFontSize: '20px', maxFontSize: '40px' });
+  </script>
 </head>
 
 <body>
   <div class="container">
     <div class="table-set">
       <nav>
-          <div class="bliss">
-            <h1>Bliss</h1>
+          <div id="bliss">
+            Bliss
           </div>
           <div class="bliss-details">
             <span class="lists">Lists</span>
             <span>Wish No More</span>
           </div>
-          <button class="sign-up">Sign Up to See Your Wishlists</button>
-          <form class="wishlist-data">
-              <input type="date" name="baby-due-date" placeholder="Baby's Due Date"></input>
-              <input type="location" name="location" placeholder="Your Location"></input>
-              <input type="text" name="wishlist-url" placeholder="Amazon Wishlist URL"></input>
-            <button>Share!</button>
-          </form>
+          <div class="buttons">
+            <button class="sign-up">Sign Up to See Your Wishlists</button>
+          </div>
       </nav>
       <section>
-        <div class="price-scale">
+        <div class="wishlist-title">
+          <img src="/images/heart.png" class="heart"/>
+          <span id="title-text">Baby Rex's Wishlist</span>
         </div>
-        <div class="wishlist-title"><img src="images/heart.png" class="heart"/>Baby Rex's Wishlist</div>
         <div class="wishlist-details">
           <div class="countdown">Arrives in 45 Days</div>
           <div class="location">Location: Pasadena, California</div>
         </div>
         <% wishlist_data.each do |item| %>
-          <div class="wishlist-item">
-              <div class="product-image"><a href="<%= item[:link] %>"><%= item[:image] %></a></div>
-              <div class="product-data">
-                <a href="<%= item[:link] %>"><%= item[:name] %></a>
+          <div class="wishlist-item-container">
+            <div class="wishlist-item">
+              <span class="product-image"><a href="<%= item[:link] %>"><%= item[:image] %></a></span>
+              <span class="product-data">
+                <%= item[:name] %>
                 <br/>
                 <%= item[:price] %>
                 <br/>
                 <%= item[:rating] %>
-              </div>
+              </span>
+              <span class="buy-product">
+                <a href="<%= item[:link] %>"><button class="buy-on-amazon">Buy on Amazon</button></a>
+              </span>
+            </div>
           </div>
         <% end %>
     </section>
