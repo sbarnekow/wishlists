@@ -386,6 +386,7 @@ button {
   -moz-border-radius: 15px;
   -webkit-border-radius: 15px;
   border-radius: 15px;
+  font-family: 'Raleway', sans-serif;
   font-size: 16px;
   color: #484848;
   letter-spacing: 0.19px;
@@ -400,7 +401,8 @@ nav {
   width: 41.66667%;
   padding: 2.35765%;
   background-color: #D94272;
-  color: white; }
+  color: white;
+  font-family: 'Raleway', sans-serif; }
 
 section {
   display: table-cell;
@@ -409,6 +411,7 @@ section {
   background-color: #ECECEC; }
 
 span.lists {
+  font-family: 'Raleway', sans-serif;
   background-color: white;
   padding: 5px;
   color: #D94272;
@@ -417,6 +420,7 @@ span.lists {
   border-radius: 2px; }
 
 #bliss {
+  font-family: 'Raleway', sans-serif;
   font-size: 400%; }
 
 .buttons {
@@ -427,6 +431,7 @@ span.lists {
   margin-bottom: 2%; }
 
 #title-text {
+  font-family: 'Raleway', sans-serif;
   font-size: 24px;
   color: #484848;
   letter-spacing: 0.29px;
@@ -434,6 +439,7 @@ span.lists {
 
 .wishlist-details {
   width: 50%;
+  font-family: 'Raleway', sans-serif;
   font-size: 16px;
   color: #484848;
   letter-spacing: 0.19px;
@@ -441,6 +447,7 @@ span.lists {
   margin-bottom: 5%; }
 
 .wishlist-item-container {
+  font-family: 'Raleway', sans-serif;
   background-color: white;
   border: 1px solid #ececec;
   display: flex;
@@ -450,6 +457,7 @@ span.lists {
   align-items: center; }
 
 .buy-product {
+  font-family: 'Raleway', sans-serif;
   font-size: 16px;
   color: #000000;
   letter-spacing: 0.19px;
@@ -459,6 +467,7 @@ span.lists {
     border-radius: 11px;
     color: white; }
   .buy-product #price {
+    font-family: 'Raleway', sans-serif;
     font-size: 20px;
     color: #9B9B9B;
     letter-spacing: 0.24px;

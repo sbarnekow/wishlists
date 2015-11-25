@@ -1,6 +1,7 @@
 <head>
   <title>amazon wishlists</title>
   <link rel="stylesheet" href="/sass/style.css" type="text/css"/>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:300,500,200' rel='stylesheet' type='text/css'>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
   <script src="/js/jquery.fittext.js"></script>
   <script>
@@ -26,13 +27,15 @@
       <section>
         <div class="wishlist-title">
           <img src="/images/heart.png" class="heart"/>
-          <span id="title-text">Baby Rex's Wishlist</span>
+          <span id="title-text"><%= wishlist_details[:title] %></span>
         </div>
         <div class="wishlist-details">
-          <div class="countdown">Arrives in 45 Days</div>
-          <div class="location">Location: Pasadena, California</div>
+          <div class="countdown">Arrival Date: <%= wishlist_details[:due_date] %> </div>
+          <div class="countdown">Arrives in <%= wishlist_details[:time_until] %> </div>
+          <div class="location">Location: <%= wishlist_details[:location] %></div>
+
         </div>
-        <% wishlist_data.each do |item| %>
+        <% wishlist_items.each do |item| %>
           <div class="wishlist-item-container">
             <div class="wishlist-item">
               <span class="product-image"><a href="<%= item[:link] %>"><%= item[:image] %></a></span>
