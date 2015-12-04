@@ -393,6 +393,61 @@ button {
   line-height: 18px;
   cursor: pointer; }
 
+.generate-wishlist {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: space-between; }
+
+.wishlist-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: space-between; }
+
+.wishlist-url-field {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: auto;
+  width: 327px;
+  border: none;
+  appearance: none;
+  box-shadow: none;
+  background: #FFFFFF;
+  padding: 18px 69px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  color: #484848;
+  letter-spacing: 0.19px;
+  line-height: 18px;
+  cursor: pointer; }
+
+.enter-wishlist {
+  border: none;
+  appearance: none;
+  box-shadow: none;
+  background: #FFFFFF;
+  padding: 18px 69px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  color: #484848;
+  letter-spacing: 0.19px;
+  line-height: 18px;
+  cursor: pointer; }
+
 .heart {
   height: 15px; }
 
@@ -406,7 +461,7 @@ nav {
 
 section {
   display: table-cell;
-  width: 66.66667%;
+  width: 100%;
   padding: 2.35765%;
   background-color: #ECECEC; }
 
@@ -447,25 +502,39 @@ span.lists {
   margin-bottom: 5%; }
 
 .wishlist-item-container {
+  padding: 3%;
   font-family: 'Raleway', sans-serif;
   background-color: white;
   border: 1px solid #ececec;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center; }
+  flex-wrap: wrap; }
+
+.product-data {
+  float: right;
+  width: 75%;
+  word-wrap: break-word; }
 
 .buy-product {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  padding: 5px;
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
   color: #000000;
   letter-spacing: 0.19px;
-  line-height: 18px; }
+  line-height: 18px;
+  width: 100%; }
   .buy-product .buy-on-amazon {
     background: #FF88A1;
     border-radius: 11px;
     color: white; }
+  .buy-product .price {
+    float: right; }
   .buy-product #price {
     font-family: 'Raleway', sans-serif;
     font-size: 20px;

@@ -20,9 +20,9 @@
             <span class="lists">Lists</span>
             <span>Wish No More</span>
           </div>
-          <div class="buttons">
+          <!-- <div class="buttons">
             <button class="sign-up">Sign Up to See Your Wishlists</button>
-          </div>
+          </div> -->
       </nav>
       <section>
         <div class="wishlist-title">
@@ -44,10 +44,16 @@
                 <br/>
                 <%= item[:rating] %>
               </span>
-              <span class="buy-product">
-                <a href="<%= item[:link] %>"><button class="buy-on-amazon">Buy on Amazon</button></a>
-                <p><span>Only  </span><span id="price"><%= item[:price] %></span></p>
-              </span>
+            </div>
+            <div class="buy-product">
+              <div class="buy-items">
+                <div>
+                  <a href="<%= item[:link] %>"><button class="buy-on-amazon">Buy on Amazon</button></a>
+                </div>
+                <div class="price">
+                  <span>Only  </span><span id="price"><%= item[:price] %></span>
+                </div>
+              </div>
             </div>
           </div>
         <% end %>

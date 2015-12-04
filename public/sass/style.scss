@@ -9,7 +9,73 @@
   @include fill-parent();
   @include row(table);
 }
+
 button {
+  border: none;
+  appearance: none;
+  box-shadow: none;
+  background: #FFFFFF;
+  padding:18px 69px;
+
+  -moz-border-radius:15px;
+  -webkit-border-radius:15px;
+  border-radius:15px;
+
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  color: #484848;
+  letter-spacing: 0.19px;
+  line-height: 18px;
+
+  cursor:pointer;
+}
+
+.generate-wishlist {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: space-between;
+}
+
+.wishlist-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: space-between;
+}
+
+.wishlist-url-field {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: auto;
+  width: 327px;
+
+  border: none;
+  appearance: none;
+  box-shadow: none;
+  background: #FFFFFF;
+  padding:18px 69px;
+
+  -moz-border-radius:15px;
+  -webkit-border-radius:15px;
+  border-radius:15px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  color: #484848;
+  letter-spacing: 0.19px;
+  line-height: 18px;
+
+  cursor:pointer;
+}
+
+.enter-wishlist {
   border: none;
   appearance: none;
   box-shadow: none;
@@ -40,7 +106,7 @@ nav {
   font-family: 'Raleway', sans-serif;
 }
 section {
-  @include span-columns(8);
+  @include span-columns(12);
   @include reset-display;
   @include pad();
   background-color: #ECECEC;
@@ -83,6 +149,7 @@ span.lists{
   margin-bottom: 5%;
 }
 .wishlist-item-container{
+  padding: 3%;
   font-family: 'Raleway', sans-serif;
   background-color: white;
   border: 1px solid #ececec;
@@ -90,27 +157,42 @@ span.lists{
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
-  align-items: center;
 }
 .wishlist-item {
 }
 .product-image {
-
+  // width: 25%;
 }
 .product-data {
-
+  float: right;
+  width: 75%;
+  word-wrap:break-word;
 }
+
 .buy-product {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  padding: 5px;
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
   color: #000000;
   letter-spacing: 0.19px;
   line-height: 18px;
+  width: 100%;
+
   .buy-on-amazon  {
   background: #FF88A1;
   border-radius: 11px;
   color: white;
   }
+
+  .price{
+    float: right;
+  }
+
   #price {
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
@@ -118,4 +200,5 @@ span.lists{
     letter-spacing: 0.24px;
     line-height: 23px;
   }
+
 }
