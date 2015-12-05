@@ -30,6 +30,7 @@ button {
   cursor:pointer;
 }
 
+
 .generate-wishlist {
   width: 100%;
   display: flex;
@@ -159,9 +160,10 @@ span.lists{
   flex-wrap: wrap;
 }
 .wishlist-item {
+  width: 100%;
 }
 .product-image {
-  // width: 25%;
+  float: left;
 }
 .product-data {
   float: right;

@@ -511,6 +511,12 @@ span.lists {
   justify-content: space-between;
   flex-wrap: wrap; }
 
+.wishlist-item {
+  width: 100%; }
+
+.product-image {
+  float: left; }
+
 .product-data {
   float: right;
   width: 75%;
